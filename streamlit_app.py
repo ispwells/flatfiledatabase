@@ -41,14 +41,14 @@ db.save_record(record3)
 def adding():
 
 
-    userid = int(input("please enter the user id"))
-    firstname = input("please enter the first name")
-    lastname = input("please enter the last name")
-    year = int(input("please enter the age of user"))
-    emailcontact = input("please enter the email")
+    userid = st.int_input("please enter the user id"))
+    firstname = st.text_input("please enter the first name")
+    lastname = st.text_input("please enter the last name")
+    year = st.int_input("please enter the age of user"))
+    emailcontact = st.text_input("please enter the email")
     record4 = Record(userid,firstname,lastname,year,emailcontact)
     db.save_record(record4)
-add = input("would you like to add a user")
+add = st.text_input("would you like to add a user")
 if add == "yes":
     adding()
 
@@ -59,9 +59,9 @@ for rec in records:
     st.write(rec)
 
 # Delete a record
-delete = input("would you like to delete a user")
+delete = st.text_input("would you like to delete a user")
 if delete == "yes":
-    selcter = int(input("please enter a number to delete a user please use the ID"))
+    selcter = st.int_input("please enter a number to delete a user please use the ID"))
     db.delete_record(selcter)
     st.write("Updated records:")
     records = db.read_record()
