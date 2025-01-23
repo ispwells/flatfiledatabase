@@ -54,16 +54,16 @@ if add == "yes":
 
 # Read records
 records = db.read_record()
-print("Records in the database:")
+st.write("Records in the database:")
 for rec in records:
-    print(rec)
+    st.write(rec)
 
 # Delete a record
 delete = input("would you like to delete a user")
 if delete == "yes":
     selcter = int(input("please enter a number to delete a user please use the ID"))
     db.delete_record(selcter)
-    print("Updated records:")
+    st.write("Updated records:")
     records = db.read_record()
     for rec in records:
-        print(rec)
+        st.write(rec)
