@@ -32,12 +32,12 @@ class FlatFileDataBase:
 
 
 db = FlatFileDataBase("database.txt")
-record1 = Record(1,"Alice","Smith",30,"alice@example.com")
-record2 = Record(2,"Bob","Brown",25,"bob@example.com")
-record3 = Record(3,"Andrew","Kelly",16,"Akelly@example.com")
-db.save_record(record1)
-db.save_record(record2)
-db.save_record(record3)
+#record1 = Record(1,"Alice","Smith",30,"alice@example.com")
+#record2 = Record(2,"Bob","Brown",25,"bob@example.com")
+#record3 = Record(3,"Andrew","Kelly",16,"Akelly@example.com")
+#db.save_record(record1)
+#db.save_record(record2)
+#db.save_record(record3)
 def adding():
 
 
