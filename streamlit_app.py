@@ -56,7 +56,7 @@ if selection == ":rainbow[delete]":
     records = db.read_record()
     for rec in records:
         st.write(rec)
-elif selection== ":rainbown[add]":
+if selection== ":rainbown[add]":
     userid = st.number_input("please enter the user id")
     firstname = st.text_input("please enter the first name")
     lastname = st.text_input("please enter the last name")
