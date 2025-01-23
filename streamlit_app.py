@@ -48,9 +48,6 @@ def adding():
     emailcontact = st.text_input("please enter the email")
     record4 = Record(userid,firstname,lastname,year,emailcontact)
     db.save_record(record4)
-add = st.text_input("would you like to add a user")
-if add == "yes":
-    adding()
 
 # Read records
 records = db.read_record()
@@ -59,11 +56,13 @@ for rec in records:
     st.write(rec)
 
 # Delete a record
-delete = st.text_input("would you like to delete a user")
-if delete == "yes":
+selection = st.radio("Please choose add or delete User",[":rainbow[add]", ":rainbow[delete]"])
+if selection == ":rainbow[delete]":
     selcter = st.number_input("please enter a number to delete a user please use the ID")
     db.delete_record(selcter)
     st.write("Updated records:")
     records = db.read_record()
     for rec in records:
         st.write(rec)
+elif selection== ":rainbown[add]":
+    adding()
